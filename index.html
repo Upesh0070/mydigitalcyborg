@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upesh | Ad Astra</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a, #16213e);
+      color: #ECECEC;
+      overflow-x: hidden;
+    }
+    nav {
+      position: fixed; top: 0; width: 100%;
+      background: rgba(0,0,0,0.8); backdrop-filter: blur(8px);
+      z-index: 1000; padding: 1rem 0;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .nav-content { display: flex; align-items: center; justify-content: space-between; }
+    .logo { color: #00FF9F; font-weight: bold; }
+    .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+    .nav-links a {
+      color: #ECECEC; text-decoration: none; transition: color .3s;
+    }
+    .nav-links a:hover { color: #00FF9F; }
+
+    header {
+      height: 100vh; display: flex; align-items: center; justify-content: center;
+      position: relative; text-align: center;
+    }
+    .hero-title {
+      font-size: 4rem; font-weight: 700;
+      background: linear-gradient(45deg,#00ffff,#ff00ff,#ffff00);
+      background-size: 300% 300%;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      animation: gradientShift 4s ease infinite;
+    }
+    .hero-sub {
+      margin-top: 1rem; font-size: 1.25rem; color: #BBBBBB;
+    }
+    @keyframes gradientShift {
+      0%,100%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+    }
+
+    section { padding: 6rem 0; position: relative; }
+    .section-title {
+      color: #00FF9F; text-align: center; font-size: 2.5rem; margin-bottom: 2.5rem;
+    }
+    p, li { line-height:1.6; color:#DDDDDD; }
+    ul { list-style: none; }
+
+    .card-grid {
+      display: grid; gap:2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    }
+    .card {
+      background: rgba(255,255,255,0.05); border-radius:12px;
+      padding:1.5rem; backdrop-filter: blur(8px);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,255,159,0.2);
+    }
+    .card h3 { color: #FF6EC7; margin-bottom:0.75rem; }
+    .status {
+      display:inline-block; margin-top:1rem; padding:0.3rem 0.8rem;
+      border-radius:20px; font-size:0.8rem;
+    }
+    .active    { background:rgba(0,255,0,0.2);   border:1px solid #0F0;   color:#0F0; }
+    .developing{ background:rgba(255,255,0,0.2); border:1px solid #FF0;   color:#FF0; }
+
+    /* particles */
+    .particle {
+      position:fixed; width:3px; height:3px; background:#FFF;
+      border-radius:50%; opacity:0.6; pointer-events:none;
+      animation:float 8s infinite linear;
+    }
+    @keyframes float {
+      0%   { transform: translateY(100vh) rotate(0deg); opacity:0; }
+      10%,90% { opacity:0.6; }
+      100% { transform: translateY(-20px) rotate(360deg); opacity:0; }
+    }
+
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">Upesh</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experiments">Experiments</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#log">Log</a></li>
+          <li><a href="#talk">Talk</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div>
+      <h1 class="hero-title">Ad Astra</h1>
+      <p class="hero-sub"><em>I build in public so you can leap further, faster.</em></p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>I cut my teeth untangling “impossible” problems on the internet, then pointed my curiosity at AI, psychology, and the magic number 42. Now I chase ideas that make tech kinder, faster, and more human.</p>
+    </div>
+  </section>
+
+  <section id="experiments">
+    <div class="container">
+      <h2 class="section-title">Current Experiments</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>AI Frontier Lab</h3>
+          <p>Daily logs of GPT agents pushed beyond the edge.</p>
+          <span class="status active">Active</span>
+        </div>
+        <div class="card">
+          <h3>Quantum Focus Tracker</h3>
+          <p>Turning emotional storms into execution sprints.</p>
+          <span class="status active">Active</span>
+        </div>
+        <div class="card">
+          <h3>Futuristic Menu System</h3>
+          <p>Cinematic AR menus that boost small-biz sales.</p>
+          <span class="status active">Active</span>
+        </div>
+        <div class="card">
+          <h3>Public Learning OS</h3>
+          <p>An open-source life-operating system in Notion & GitHub.</p>
+          <span class="status active">Active</span>
+        </div>
+        <div class="card">
+          <h3>Tech-for-Everyone Courses</h3>
+          <p>Bringing non-savvy users up to speed, fast.</p>
+          <span class="status developing">Beta</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <h2 class="section-title">Work</h2>
+      <ul>
+        <li>• <strong>Custom GPT Suites</strong> — Bespoke AI assistants for niche workflows.</li>
+        <li>• <strong>Nepali Chatbot</strong> — Friendly support for non-English speakers.</li>
+        <li>• <strong>Funny & Scary Encounters</strong> — Conversational micro-games powered by GPT.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="services">  
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>AI & Automation Blueprints</h3>
+          <p>Design custom GPTs, workflow automations, prompt libraries, and content pipelines.</p>
+          <span class="status active">Available</span>
+          <p><a href="#talk" style="color:#00FF9F; text-decoration:none;">Talk →</a></p>
+        </div>
+        <div class="card">
+          <h3>Futuristic Web & Menu Design</h3>
+          <p>Sleek, mobile-first sites and AR-infused restaurant menus that wow users.</p>
+          <span class="status active">Available</span>
+          <p><a href="#talk" style="color:#00FF9F; text-decoration:none;">Talk →</a></p>
+        </div>
+        <div class="card">
+          <h3>AI-Powered Digital Marketing</h3>
+          <p>End-to-end growth playbooks: SEO, social, video hooks, automated copy.</p>
+          <span class="status active">Available</span>
+          <p><a href="#talk" style="color:#00FF9F; text-decoration:none;">Talk →</a></p>
+        </div>
+        <div class="card">
+          <h3>Custom Chatbots & Helpdesks</h3>
+          <p>24/7 bots for leads, support, and scheduling via web or WhatsApp.</p>
+          <span class="status active">Available</span>
+          <p><a href="#talk" style="color:#00FF9F; text-decoration:none;">Talk →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="log">
+    <div class="container">
+      <h2 class="section-title">Captain’s Log</nltk_error />
+      <p><em>Raw thoughts, wins, fails, and first-principle riffs—updated whenever coffee meets curiosity.</em></p>
+    </div>
+  </section>
+
+  <section id="talk">
+    <div class="container">
+      <h2 class="section-title">Talk</h2>
+      <p>🐦 X/Twitter: <a href="https://x.com/upeshinmars" target="_blank">@upeshinmars</a></p>
+      <p>🧵 Threads: <a href="https://www.threads.com/@hotbpoison" target="_blank">@hotbpoison</a></p>
+    </div>
+  </section>
+
+  <script>
+    function createParticle() {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + 'vw';
+      p.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 10000);
+    }
+    setInterval(createParticle, 200);
+
+    document.addEventListener('mousemove', e => {
+      const h = document.querySelector('header');
+      const x = e.clientX / window.innerWidth * 100;
+      const y = e.clientY / window.innerHeight * 100;
+      h.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(0,255,159,0.1), transparent 60%)`;
+    });
+  </script>
+</body>
+</html>
