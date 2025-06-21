@@ -4,7 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Upesh | Ad Astra</title>
-  <style>
+  <.live-link {
+  color: #1E90FF;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid #1E90FF;
+  transition: color .2s, border-color .2s;
+}
+.live-link:hover {
+  color: #fff;
+  border-color: #fff;
+}
+  >
     /* Reset & Base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -141,7 +154,20 @@
       .live-logo { font-size:1.1rem; }
       .live-pill { font-size:0.8rem; padding:0.5px 7px; }
     }
-  </style>
+  .live-link {
+  color: #1E90FF;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid #1E90FF;
+  transition: color .2s, border-color .2s;
+}
+.live-link:hover {
+  color: #fff;
+  border-color: #fff;
+}
+>
 </head>
 <body>
   <!-- Navigation -->
@@ -156,11 +182,17 @@
         <li><a href="#log">Log</a></li>
         <li><a href="#talk">Talk</a></li>
       </ul>
-      <!-- Online LIVE Badge -->
-      <div id="live-badge" class="live-badge">
-        <span class="live-logo">NASA+</span>
-        <span class="live-pill">LIVE</span>
-      </div>
+      <!-- Online LIVE Link -->
+      <a
+  id="live-badge"
+  class="live-badge"
+  href="https://www.notion.so/Building-in-Public-212983e5ce75804688b6e1b68f4d681e"
+  target="_blank"
+  rel="noopener"
+>
+  LIVE
+</a>
+      <span class="live-pill">Building in Public</span> 
     </div>
   </nav>
 
@@ -255,13 +287,22 @@
     </div>
   </section>
 
-  <!-- Captain’s Log -->
+<h2 class="section-title">
+  Captain’s Log 
+  <a
+    href="https://www.notion.so/Building-in-Public-212983e5ce75804688b6e1b68f4d681e"
+    target="_blank"
+    rel="noopener"
+    class="live-link"
+  >
+    LIVE
+  </a>
+</h2>
   <section id="log">
     <div class="container">
-      <h2 class="section-title">Captain’s Log</h2>
-      <p><em>Raw thoughts, wins, fails, and first-principle riffs—updated whenever coffee meets curiosity.</em></p>
+      <p>Follow my journey of building in public, sharing insights, experiments, and lessons learned.</p>
+      <p>Check out the latest updates on my <a href="https://www.notion.so/Building-in-Public-212983e5ce75804688b6e1b68f4d681e" target="_blank">Notion page</a>.</p>
     </div>
-  </section>
 
   <!-- Talk -->
   <section id="talk">
